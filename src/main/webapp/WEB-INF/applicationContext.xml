@@ -1,0 +1,60 @@
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+        xmlns:jee="http://www.springframework.org/schema/jee"
+        xmlns:task="http://www.springframework.org/schema/task"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+
+    <jee:jndi-lookup id="helloworldDB" jndi-name="java:helloworldDB" />
+    <jee:jndi-lookup id="connectionFactory" jndi-name="java:connectionFactory" />
+    <jee:jndi-lookup id="helloworldQueue" jndi-name="java:helloworldQueue" />
+
+    <context:component-scan base-package="com.tomeespring.helloworld" />
+    <context:annotation-config />
+
+    <tx:jta-transaction-manager />
+    <tx:annotation-driven />
+
+    <task:annotation-driven executor="executor" />
+    <task:executor id="executor" pool-size="7"/>
+
+    <jaxrs:server id="restContainer" address="/" >
+        <jaxrs:serviceBeans>
+            <ref bean="jaxrsResource" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="jaxbProvider"/>
+            <ref bean="jsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="jaxrsResource" class="com.tomeespring.helloworld.jaxrs.SpringJAXRSResource" />
+    <bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider"/>
+    <bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider"/>
+
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="defaultDestination" ref="helloworldQueue" />
+    </bean>
+
+   <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+       <property name="dataSource" ref="helloworldDB"/>
+       <property name="jpaVendorAdapter" ref="jpaVenderAdapter"/>
+   </bean>
+
+    <bean id="jpaVenderAdapter" class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
+        <property name="database" value="MYSQL" />
+        <property name="showSql" value="true"/>
+        <property name="generateDdl" value="true"/>
+        <property name="databasePlatform" value="org.apache.openjpa.jdbc.sql.MySQLDictionary"/>
+    </bean>
+</beans>
