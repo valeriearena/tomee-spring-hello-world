@@ -18,8 +18,8 @@ Follow the Setup Steps and Execution Steps below.
 9. Tail TOMEE_HOME/logs/catalina.out.
 
 NOTE: 
-The EntityManagers in the DAOs (tomee-hello-world/src/main/java/com/tomee/helloworld/jpa/dao) are configured with H2 in memory database. 
-To configure the DAOS with MySQL, configure the EntityManagers with "helloworldDB" (tomee-hello-world/src/main/resources/persistence.xml). 
+The EntityManagers in the DAOs (tomee-spring-hello-world/src/main/java/com/tomee/helloworld/jpa/dao) are configured with H2 in memory database. 
+To configure the DAOS with MySQL, configure the EntityManagers with "helloworldDB" (tomee-spring-hello-world/src/main/resources/persistence.xml). 
 You will need to install MySQL. Use "localuser", "password" as the username and password. If you use something different, update the username and password in tomee.xml.
 
 *************** Execution Steps ***************
@@ -32,7 +32,7 @@ http://localhost:8080/demo/helloworld/[path]
 
 The endpoints are either GET or POST requests. Any parameters required in the request are submitted as path parameters:
 
-http://localhost:8080/demo/helloworld/[path]/{pathparam}
+http://localhost:8080/springdemo/helloworld/[path]/{pathparam}
 
 or as JSON objects:
 
