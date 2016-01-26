@@ -1,4 +1,4 @@
-# tomee-hello-world
+# tomee-spring-hello-world
 INPROGRESS - THE CODE IN THIS REPO HAS NOT BEEN DEPLOYED YET
 
 TomEE Hello Worlds wiith JAX-RS, JAXB, JPA, and JMS. 
@@ -9,12 +9,12 @@ Follow the Setup Steps and Execution Steps below.
 
 1. Download and install TomEE Plus: http://tomee.apache.org/index.html
 2. Clone the tomee-hello-world repo.
-3. Copy tomee-hello-world/setup/tomee.xml to TOMEE_HOME/conf.
-4. Copy tomee-hello-world/setup/logging.properties to TOMEE_HOME/conf.
-5. Copy tomee-hello-world/setup/mysql-connector-java-5.1.29-bin.jar to TOMEE_HOME/lib.
-6. Copy tomee-hello-world/setup/h2-1.3.176.jar to TOMEE_HOME/lib.
+3. Copy tomee-spring-hello-world/setup/tomee.xml to TOMEE_HOME/conf.
+4. Copy tomee-spring-hello-world/setup/logging.properties to TOMEE_HOME/conf.
+5. Copy tomee-spring-hello-world/setup/mysql-connector-java-5.1.29-bin.jar to TOMEE_HOME/lib.
+6. Copy tomee-spring-hello-world/setup/h2-1.3.176.jar to TOMEE_HOME/lib.
 7. Run build.gradle.
-8. Copy tomee-hello-world/build/libs/demo.war to TOMEE_HOME/webapps.
+8. Copy tomee-spring-hello-world/build/libs/demo.war to TOMEE_HOME/webapps.
 9. Tail TOMEE_HOME/logs/catalina.out.
 
 NOTE: 
