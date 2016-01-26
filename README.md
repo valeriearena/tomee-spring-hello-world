@@ -36,6 +36,7 @@ http://localhost:8080/demo/helloworld/[path]/{pathparam}
 
 or as JSON objects:
 
+```json
 {
   "helloworld": {
     "salutation": "hi jaxrs",
@@ -43,13 +44,16 @@ or as JSON objects:
     "description": "just saying hi to jaxrs"
   }
 }
+```
 
 or XML:
 
+```xml
 <helloworld>
 	<salutation>hi xml</salutation>
 	<technology>jaxrs</technology>
 	<description>saying hi to jaxrs</description>
 </helloworld>
+```
 
 See the com.tomeespring.helloworld.jaxrs.SpringJAXRSResource and com.tomeespring.helloworld.jaxb.SpringJAXBHelloWorld.
