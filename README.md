@@ -8,7 +8,7 @@ Follow the Setup Steps and Execution Steps below.
 *************** Setup Steps *************** 
 
 1. Download and install TomEE Plus: http://tomee.apache.org/index.html
-2. Clone the tomee-hello-world repo.
+2. Clone the tomee-spring-hello-world repo.
 3. Copy tomee-spring-hello-world/setup/tomee.xml to TOMEE_HOME/conf.
 4. Copy tomee-spring-hello-world/setup/logging.properties to TOMEE_HOME/conf.
 5. Copy tomee-spring-hello-world/setup/mysql-connector-java-5.1.29-bin.jar to TOMEE_HOME/lib.
