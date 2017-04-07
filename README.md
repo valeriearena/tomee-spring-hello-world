@@ -1,4 +1,4 @@
-# tomee-spring-hello-world
+# tomee-spring-hello-world - IN PROGRESS
 INPROGRESS - THE CODE IN THIS REPO HAS NOT BEEN DEPLOYED YET
 
 TomEE Hello Worlds wiith JAX-RS, JAXB, JPA, and JMS. 
