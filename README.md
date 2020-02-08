@@ -1,5 +1,4 @@
-# tomee-spring-hello-world - IN PROGRESS
-TomEE Hello Worlds wiith JAX-RS, JAXB, JPA, and JMS. 
+# TomEE Hello Worlds wiith JAX-RS, JAXB, JPA, and JMS. 
 
 Follow the Setup Steps and Execution Steps below.
 
