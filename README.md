@@ -1,4 +1,4 @@
-# TomEE Hello Worlds wiith JAX-RS, JAXB, JPA, and JMS. 
+# TomEE with JAX-RS, JAXB, JPA, and JMS. 
 
 Follow the Setup Steps and Execution Steps below.
 
