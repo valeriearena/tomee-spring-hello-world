@@ -1,4 +1,4 @@
-# TomEE with JAX-RS, JAXB, JPA, and JMS. 
+# TomEE with Spring, JAX-RS, JPA, and JMS. 
 
 Follow the Setup Steps and Execution Steps below.
 
