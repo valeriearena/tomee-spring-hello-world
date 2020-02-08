@@ -1,4 +1,4 @@
-# TomEE with Spring, JAX-RS, JPA, and JMS. 
+# Web app with JAX-RS, CDI, EJB, JPA, and JMS that can be deployed to TomEE (Enterprise Tomcat).
 
 Follow the Setup Steps and Execution Steps below.
 
